@@ -32,6 +32,12 @@
 					<p>
 						made with <span style="color:red">♥</span> by <a rel="nofollow" href="https://github.com/xafardero">xaf</a>
 					</p>
+					<aside class="notes">
+							<ul>
+								<li>De que trata esta cosa</li>
+								<li>El porque de esto</li>
+							</ul>
+						</aside>
 				</section>
 				<section>
 					<h2>What is architecture?</h2>
@@ -40,7 +46,10 @@
 				<section>
 					<h2>Good things to keep in mind when designing and building software</h2>
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+						<ul>
+							<li>Descripcion</li>
+							<li>Problemas</li>
+						</ul>
 					</aside>
 				</section>
 				<section>
@@ -48,6 +57,13 @@
 				</section>
 				<section>
 					<p><img data-src="img/folder_structure.png"></p>
+					<aside class="notes">
+						<ul>
+							<li>Debe ser facil de programar nuevas features en ella.</li>
+							<li>Para ello ayuda el codigo bien organizado, los estandares ayudan (PHP -> PSR, Python -> Peps).</li>
+							<li>Que el entorno sea facil de configurar y usar (Docker/Vagrant). (Ejemplo Ekon vs PHP/Python)</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2>Deployment</h2>
@@ -55,27 +71,63 @@
 				<section>
 					<p><img data-src="img/jenkins.svg"></p>
 					<p><img data-src="img/slack.png"></p>
+					<aside class="notes">
+						<ul>
+							<li>Como deployabamos en PHP antes</li>
+							<li>Como deployan en ekon picture</li>
+							<li>Como deployamos con jenkins picture</li>
+							<li>Geopfry</li>
+							<li>Integracion continua</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2>Operation</h2>
 				</section>
 				<section>
 					<p><img data-src="img/operation.jpg"></p>
+					<aside class="notes">
+						<ul>
+							<li>En principio el proyecto nacio para la compra de energia que se hace en holaluz, para ello se descarga de varios etl, informacion de todos los cups y con ella genera predicciones cada X (Ya que el proceso tarda varias horas), mas adelante se le añadieron funcionalidades de domestico para obtener informacion de multicups (proceso que tardaba mucho) luego se le añadio el miniclips una "api" que se usaba en lumo/altas etc/etc</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2>Manteinance</h2>
 				</section>
 				<section>
 					<p><img data-src="img/manteinance.jpg"></p>
+					<aside class="notes">
+						<ul>
+							<li>Ejemplo de yo con los floats del phpstan</li>
+							<li>-</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2>Keep options open</h2>
 				</section>
 				<section>
 					<p><img data-src="img/keep-options-open.jpg"></p>
+					<aside class="notes">
+						<ul>
+							<li>Debe estar abierta a que se usen otras tecnologias BD, apis de terceros Exemple: Imaginar que teneis una app que funciona con mongoDB este no os funciona bien y quereis cambiar pues la architectura debe permitir que el cambio sea posible facilmente.</li>
+							<li>The stategy behind that facilitation is to leave as many options open as possible, for as long as possible.</li>
+							<li>Con testo es mas facil añadir tests</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2>Device independence</h2>
+				</section>
+				<section>
+					<aside class="notes">
+						<ul>
+							<li>CINTAS/HDD/BD</li>
+							<li>ERP to the cloud</li>
+							<li>Containers</li>
+						</ul>
+					</aside>
 				</section>
 				<section>
 					<h2>Screaming architecture</h2>
@@ -101,6 +153,7 @@
 				</section>
 				<section>
 					<p><img height=600 data-src="img/beily-A.jpg"></p>
+					<p>https://xafardero.github.io/clean-architecture-overview</p>
 				</section>
 			</div>
 		</div>
