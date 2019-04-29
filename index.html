@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Clean architecture</h1>
+					<h3>An overview of the journey</h3>
+					<br>
+					<p>
+						made with <span style="color:red">♥</span> by <a rel="nofollow" href="https://github.com/xafardero">xaf</a>
+					</p>
+				</section>
+				<section>
+					<h2>What is architecture?</h2>
+					<p class="fragment">The art and technique of designing and building, as distinguished from the skills associated with construction.</p>
+				</section>
+				<section>
+					<h2>Good things to keep in mind when designing and building software</h2>
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+					</aside>
+				</section>
+				<section>
+					<h2>Development</h2>
+				</section>
+				<section>
+					<p><img data-src="img/folder_structure.png"></p>
+				</section>
+				<section>
+					<h2>Deployment</h2>
+				</section>
+				<section>
+					<p><img data-src="img/jenkins.svg"></p>
+					<p><img data-src="img/slack.png"></p>
+				</section>
+				<section>
+					<h2>Operation</h2>
+				</section>
+				<section>
+					<p><img data-src="img/operation.jpg"></p>
+				</section>
+				<section>
+					<h2>Manteinance</h2>
+				</section>
+				<section>
+					<p><img data-src="img/manteinance.jpg"></p>
+				</section>
+				<section>
+					<h2>Keep options open</h2>
+				</section>
+				<section>
+					<p><img data-src="img/keep-options-open.jpg"></p>
+				</section>
+				<section>
+					<h2>Device independence</h2>
+				</section>
+				<section>
+					<h2>Screaming architecture</h2>
+					<p><img data-src="img/scream.png"></p>
+				</section>
+				<section>
+					<h2>Hexagonnal</h2>
+					<img data-src="img/port_and_adapters.png">
+				</section>
+				<section>
+					<h2>Onion (layered)</h2>
+					<img data-src="img/onion-arch.jpg">
+				</section>
+				<section>
+					<h2>Clean arquitecture</h2>
+					<p><img data-src="img/clean_arch.jpg"></p>
+				</section>
+				<section>
+					<h2>SOLID principles can help to archive that</h2>
+				</section>
+				<section>
+					<h2>Wrap-up</h2>
+				</section>
+				<section>
+					<p><img height=600 data-src="img/beily-A.jpg"></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				showSlideNumber: 'speaker',
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
