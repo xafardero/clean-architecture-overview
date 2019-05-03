@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Clean architecture</title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -35,22 +35,42 @@
 					<aside class="notes">
 							<ul>
 								<li>De que trata esto?</li>
-								<li>Es una mezclarla de lo que he aprendido de la clean architecture y mis experiencias en HL</li>
+								<li>Clean Code -- Robert C. Martin</li>
+								<li>Es una mezcla de lo que aprendido en holaluz</li>
 								<li>Y creo que podemos aprender</li>
 							</ul>
 						</aside>
 				</section>
 				<section>
 					<h2>What is architecture?</h2>
-					<p class="fragment">The art and technique of designing and building, as distinguished from the skills associated with construction.</p>
+					<p class="fragment">Architecture is the decisions that you wish you could get right early in a project, but that you are not necessarily more likely to get them right than any other. Ralph Johnson.</p>
 					<aside class="notes">
 						<ul>
 							<li>Todos podemos mejor o peor</li>
-							<li>Luego hay que mantener etc</li>
-							<li>Y no quieres morir</li>
+							<li>Luego hay que mantener y no quieres que sea un marron</li>
+							<li>Y es ahi donde se ve si tienes una buena architectura o no</li>
 						</ul>
 					</aside>
 				</section>
+				<section>
+						<h2>Characteristics of a clean architecture</h2>
+						<ul>
+							<li>Independent of Frameworks.</li>
+							<li>Testable.</li>
+							<li>Independent of UI.</li>
+							<li>Independent of Database.</li>
+							<li>Independent of any external agency.</li>
+						</ul>
+						<aside class="notes">
+								<ul>
+									<li> The architecture does not depend on the existence of some library of feature laden software. This allows you to use such frameworks as tools, rather than having to cram your system into their limited constraints.</li>
+									<li>The business rules can be tested without the UI, Database, Web Server, or any other external element.</li>
+									<li>The UI can change easily, without changing the rest of the system. A Web UI could be replaced with a console UI, for example, without changing the business rules.</li>
+									<li>You can swap out Oracle or SQL Server, for Mongo, BigTable, CouchDB, or something else. Your business rules are not bound to the database.</li>
+									<li>In fact your business rules simply don’t know anything at all about the outside world.</li>
+								</ul>
+							</aside>
+					</section>
 				<section>
 					<h2>Good things to keep in mind when designing and building software</h2>
 					<aside class="notes">
@@ -65,12 +85,13 @@
 					<aside class="notes">
 						<ul>
 							<li>Debe ser facil de programar nuevas features en ella.</li>
-							<li>Para ello ayuda el codigo bien organizado, los estandares ayudan (PHP -> PSR, Python -> Peps).</li>
-							<li>Que el entorno sea facil de configurar y usar (Docker/Vagrant). (Ejemplo Ekon vs PHP/Python)</li>
+							<li>Codigo bien organizado, los estandares</li>
+							<li>Entorno facil</li>
 						</ul>
 					</aside>
 				</section>
-				<section data-background-size="contain" data-background="img/folder_structure.png"></section>
+				<section data-background-size="contain" data-background="img/folder_structure.png">
+				</section>
 				<section>
 					<h2>Deployment</h2>
 					<aside class="notes">
@@ -95,7 +116,14 @@
 						</ul>
 					</aside>
 				</section>
-				<section data-background-size="contain" data-background="img/operation.jpg"></section>
+				<section data-background-size="contain" data-background="img/operation.jpg">
+					<aside class="notes">
+							<ul>
+								<li>CLIPS - En principio el proyecto nacio para la compra de energia que se hace en holaluz, para ello se descarga de varios etl, informacion de todos los cups y con ella genera predicciones cada X (Ya que el proceso tarda varias horas), mas adelante se le añadieron funcionalidades de domestico para obtener informacion de multicups (proceso que tardaba mucho) luego se le añadio el miniclips una "api" que se usaba en lumo/altas etc/etc</li>
+								<li>I bueno zend/laravel/core</li>
+							</ul>
+						</aside>
+				</section>
 				<section>
 					<h2>Maintenance</h2>
 					<aside class="notes">
@@ -106,7 +134,15 @@
 						</ul>
 					</aside>
 				</section>
-				<section data-background-size="contain" data-background="img/manteinance.jpg"></section>
+				<section data-background-size="contain" data-background="img/manteinance.png">
+					<aside class="notes">
+						<ul>
+							<li>Tests</li>
+							<li>Ejemplo de yo con los floats del phpstan</li>
+							<li>Tener la infra as a code nos ayuda tambien a que el mantenimiento sea mas facil</li>
+						</ul>
+					</aside>
+				</section>
 				<section>
 					<h2>Keep options open</h2>
 					<aside class="notes">
@@ -117,7 +153,15 @@
 						</ul>
 					</aside>
 				</section>
-				<section data-background-size="contain" data-background="img/keep-options-open.jpg"></section>
+				<section data-background-size="contain" data-background="img/keep-options-open.jpg">
+					<aside class="notes">
+						<ul>
+							<li>Debe estar abierta a que se usen otras tecnologias BD, apis de terceros Exemple: Imaginar que teneis una app que funciona con mongoDB este no os funciona bien y quereis cambiar pues la architectura debe permitir que el cambio sea posible facilmente.</li>
+							<li>The stategy behind that facilitation is to leave as many options open as possible, for as long as possible.</li>
+							<li>Con testo es mas facil añadir tests</li>
+						</ul>
+					</aside>
+				</section>
 				<section>
 					<h2>Device independence</h2>
 					<aside class="notes">
@@ -128,8 +172,7 @@
 						</ul>
 					</aside>
 				</section>
-				<section>
-					Falta img
+				<section  data-background-size="contain" data-background="img/punch-cards.jpg">
 				</section>
 				<section>
 					<ul>
@@ -147,27 +190,28 @@
 					<aside class="notes">
 						<ul>
 							<li>Preguntar si alguien sabe lo que es?</li>
-							<li>Libreria de turno.</li>
+							<li>Que tu app no se parezca a la libreria o framework de turno</li>
 							<li>Usecases/servicios.</li>
 						</ul>
 					</aside>
 				</section>
 				<section>
-					<h2>Hexagonnal</h2>
+						<h2>Onion</h2>
+						<img data-src="img/onion2.png">
+						<aside class="notes">
+							<ul>
+								<li>Al separar la applicacion entre capas es mas facil modificar o añadir cosas en vez de tocar todo el codigo </li>
+								<li>a la vez normalmente hay las 3 tipicas capas de domainn app infrastructure... pero puede haber mas.</li>
+							</ul>
+						</aside>
+					</section>
+				<section>
+					<h2>Port and adapters</h2>
 					<img data-src="img/port_and_adapters.png">
 					<aside class="notes">
 						<ul>
 							<li>Permitir que una aplicación sea ejecutada indistintamente por usuarios, API, test, o desde CLI, porque eso nos permitira testear y cambiar mas facilmente modulos.</li>
 							<li>Recordar que en la architectura hexagonnal no hay capas aunque no hay capas.</li>
-						</ul>
-					</aside>
-				</section>
-				<section>
-					<h2>Onion (layered)</h2>
-					<img data-src="img/onion-arch.jpg">
-					<aside class="notes">
-						<ul>
-							<li>Al separar la applicacion entre capas es mas facil modificar o añadir cosas en vez de tocar todo el codigo a la vez normalmente hay las 3 tipicas capas de domainn app infrastructure... pero puede haber mas.</li>
 						</ul>
 					</aside>
 				</section>
@@ -181,17 +225,14 @@
 					</aside>
 				</section>
 				<section>
-					<h2>SOLID principles can help to archive that</h2>
+					<h2>How we can archive that?</h2>
 					<aside class="notes">
 						<ul>
 							<li>
-								En que nos ayuda el SOLID en conseguir una clean arquitecture.
-								You create a clean architecture by following the SOLID principles to break your system into components along your system boundaries.
-								SRP: la noción de que un objeto solo debería tener una única responsabilidad (para cambiar)
-								OCP: clases debe estar abiertas para su extensión, pero cerradas para su modificación
-								LSP: los objetos deberian ser remplazables por instancias de sus subtipos sin alterar el funcionamiento normal
-								ISP: Interfaces mas pesqueñas, en vez de interfaces gigantes.
-								DIP: Depender de abstracciones no de implementaciones.								
+								SOLID principles
+							</li>
+							<li>
+								SOLID principles
 							</li>
 						</ul>
 					</aside>
@@ -205,10 +246,8 @@
 						</ul>
 					</aside>
 				</section>
-				<section>
-					<h2>Thanks!</h2>
-					<p><img height=600 data-src="img/beily-A.jpg"></p>
-				</section>
+				<section data-background-size="contain" data-background="img/beily-A.jpg"></section>
+				<section data-background-size="contain" data-background="img/beily-A.jpg">Thanks!</section>
 			</div>
 		</div>
 
